@@ -1,0 +1,229 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --mm-red: #D52E3A;
+    --mm-red-dark: #B91F2C;
+    --mm-red-soft: #FFF1F2;
+    --mm-canvas: #F5F6F8;
+    --mm-surface: #FFFFFF;
+    --mm-text: #24272D;
+    --mm-muted: #6B7280;
+    --mm-gray: #AEB0B3;
+    --mm-border: #E5E7EB;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --mm-red: #E1434F;
+    --mm-red-dark: #C82834;
+    --mm-red-soft: rgba(225, 67, 79, 0.12);
+    --mm-canvas: #090B0F;
+    --mm-surface: #11141B;
+    --mm-surface-elevated: #171B24;
+    --mm-text: #F3F4F6;
+    --mm-muted: #8B93A1;
+    --mm-gray: #6B7280;
+    --mm-border: #232834;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--mm-canvas);
+    color: var(--mm-text);
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--mm-canvas);
+    color: var(--mm-text);
+    overflow-x: hidden;
+  }
+
+  .dark body {
+    letter-spacing: 0.005em;
+  }
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Safe area helpers for iOS / Android standalone PWA */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.bottom-safe-offset {
+  bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Apple Liquid Glass inspired surfaces with solid fallback for unsupported browsers */
+.liquid-glass-bar {
+  background-color: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.85);
+}
+
+.dark .liquid-glass-bar {
+  background-color: rgba(14, 17, 23, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.liquid-glass-dock {
+  background-color: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow:
+    0 10px 30px -10px rgba(15, 23, 42, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dark .liquid-glass-dock {
+  background-color: rgba(17, 20, 27, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 14px 36px -10px rgba(0, 0, 0, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.11);
+}
+
+.liquid-glass-surface {
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(229, 231, 235, 0.85);
+  box-shadow:
+    0 4px 18px -6px rgba(15, 23, 42, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.dark .liquid-glass-surface {
+  background-color: rgba(17, 20, 27, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 24px -8px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.liquid-glass-segment {
+  background-color: rgba(235, 237, 240, 0.92);
+  border: 1px solid rgba(229, 231, 235, 0.85);
+}
+
+.dark .liquid-glass-segment {
+  background-color: rgba(13, 16, 22, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.liquid-glass-list {
+  background-color: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  box-shadow:
+    0 4px 16px -6px rgba(15, 23, 42, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+.dark .liquid-glass-list {
+  background-color: rgba(17, 20, 27, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 24px -8px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .liquid-glass-bar {
+    background-color: rgba(255, 255, 255, 0.74);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    backdrop-filter: blur(16px) saturate(150%);
+  }
+
+  .dark .liquid-glass-bar {
+    background-color: rgba(14, 17, 23, 0.78);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(140%);
+  }
+
+  .liquid-glass-dock {
+    background-color: rgba(255, 255, 255, 0.78);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    backdrop-filter: blur(18px) saturate(160%);
+  }
+
+  .dark .liquid-glass-dock {
+    background-color: rgba(17, 20, 27, 0.82);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    backdrop-filter: blur(20px) saturate(150%);
+  }
+
+  .liquid-glass-surface {
+    background-color: rgba(255, 255, 255, 0.72);
+    -webkit-backdrop-filter: blur(12px) saturate(135%);
+    backdrop-filter: blur(12px) saturate(135%);
+  }
+
+  .dark .liquid-glass-surface {
+    background-color: rgba(17, 20, 27, 0.76);
+    -webkit-backdrop-filter: blur(14px) saturate(135%);
+    backdrop-filter: blur(14px) saturate(135%);
+  }
+
+  .liquid-glass-segment {
+    background-color: rgba(235, 237, 240, 0.7);
+    -webkit-backdrop-filter: blur(10px) saturate(130%);
+    backdrop-filter: blur(10px) saturate(130%);
+  }
+
+  .dark .liquid-glass-segment {
+    background-color: rgba(13, 16, 22, 0.78);
+    -webkit-backdrop-filter: blur(12px) saturate(130%);
+    backdrop-filter: blur(12px) saturate(130%);
+  }
+
+  .liquid-glass-list {
+    background-color: rgba(255, 255, 255, 0.88);
+    -webkit-backdrop-filter: blur(12px) saturate(130%);
+    backdrop-filter: blur(12px) saturate(130%);
+  }
+
+  .dark .liquid-glass-list {
+    background-color: rgba(17, 20, 27, 0.88);
+    -webkit-backdrop-filter: blur(14px) saturate(130%);
+    backdrop-filter: blur(14px) saturate(130%);
+  }
+}
+
+/* Custom hairline scrollbar for dense corporate tables/lists */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(174, 176, 179, 0.45);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(110, 118, 129, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Minas Mais Executa",
+  "description": "Crie uma identidade visual original para o aplicativo Minas Mais Executa, plataforma corporativa de gestão, execução e acompanhamento de tarefas da rede Drogarias Minas Mais.\n\nCONCEITO\n\nA logo deve comunicar:\n\nExecução e produtividade.\n\nOrganização operacional.\n\nEficiência e agilidade.\n\nConexão entre lojas.\n\nTecnologia e confiança.\n\nInspire-se na sofisticação visual dos aplicativos Apple, Linear, Things 3 e em projetos conceituais premium.\n\nDIREÇÃO CRIATIVA\n\nDesenvolva um símbolo geométrico minimalista e memorável, explorando de maneira original as letras M e E, elementos de movimento, progresso ou conclusão.\n\nEvite ícones genéricos de checklist, prancheta, raio ou engrenagem.\n\nIdentidade cromática:\n\nVermelho Minas Mais: #D52E3A\n\nVermelho profundo: #B91F2C\n\nBranco: #FFFFFF\n\nCinza: #AEB0B3\n\nGrafite: #24272D\n\nCrie uma identidade moderna, elegante e corporativa, sem efeitos 3D exagerados ou gradientes desnecessários.\n\nVERSÕES\n\nDesenvolva três propostas distintas de símbolo e apresente a aplicação em:\n\nLogo horizontal: símbolo + Minas Mais Executa.\n\nÍcone quadrado do PWA, com cantos arredondados.\n\nVersão monocromática.\n\nVersões para light mode e dark mode.\n\nAplicação no cabeçalho do aplicativo.\n\nO símbolo deve continuar reconhecível em tamanhos pequenos, inclusive 32×32 px.\n\nREQUISITOS TÉCNICOS\n\nPriorize desenho vetorial em SVG, com formas geométricas limpas e proporções consistentes.\n\nEvite detalhes que desapareçam em tamanhos reduzidos.\n\nNão reproduza nem modifique indevidamente o logotipo oficial da Drogarias Minas Mais. A nova marca deve funcionar como identidade complementar do produto.\n\nRESULTADO\n\nQuero uma identidade com qualidade de branding profissional, inspirada em concept apps premium, mas adequada a um software corporativo real.\n\nPrimeiro apresente três conceitos visuais diferentes. Não substitua a identidade atual do aplicativo até que eu escolha uma proposta.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
